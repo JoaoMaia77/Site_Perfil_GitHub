@@ -11,7 +11,7 @@ fetch(`https://api.github.com/repos/${username}/${repoName}`, {
 })
     .then(response => response.json())
     .then(repo => {
-        // Usando os IDs corretos do repo.html
+    
         document.getElementById('Trepo').textContent = `Repositório: ${repo.name}`;
         document.getElementById('descricao').textContent = repo.description || 'Sem descrição';
         document.getElementById('data').textContent = repo.created_at.split('T')[0];
@@ -19,14 +19,14 @@ fetch(`https://api.github.com/repos/${username}/${repoName}`, {
         document.getElementById('link').textContent = repo.html_url;
         document.getElementById('link').href = repo.html_url;
 
-        // Elementos para estrelas e forks (substituindo as imagens por ícones do Font Awesome)
+
         const iconStar = document.getElementById('iconstar');
         iconStar.innerHTML = `<i class="fa-solid fa-star"></i> <p class="legenda">${repo.stargazers_count}</p>`;
 
         const iconFork = document.getElementById('iconperson');
         iconFork.innerHTML = `<i class="fa-solid fa-code-fork"></i> <p class="legenda">${repo.forks_count}</p>`;
 
-        // Busca as linguagens usadas no repositório
+ 
         fetch(repo.languages_url, {
             headers: {
                 'Authorization': `token ${token}`
@@ -34,13 +34,13 @@ fetch(`https://api.github.com/repos/${username}/${repoName}`, {
         })
             .then(response => response.json())
             .then(languages => {
-              const topicosContainer = document.getElementById('topicos-container'); // Seleciona o container correto
+              const topicosContainer = document.getElementById('topicos-container'); 
           
 
-                // Remove os tópicos antigos (se existirem)
-                topicosContainer.innerHTML = ''; // Limpa o container antes de adicionar novos tópicos
+             
+                topicosContainer.innerHTML = '';
 
-                // Cria os elementos de tópico para cada linguagem (se houver)
+                
                 for (const language in languages) {
                     const listItem = document.createElement('p');
                     listItem.textContent = language;
