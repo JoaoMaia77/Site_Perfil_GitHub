@@ -1,0 +1,14 @@
+{
+  "conteudoSugerido": [
+    { "imagem": "assets/img/img6.jpg", "link": "https://www.youtube.com/watch?v=VPvVD8t02U8" },
+    { "imagem": "assets/img/img7.jpg", "link": "#" },
+    { "imagem": "assets/img/img8.jpg", "link": "https://www.youtube.com/watch?v=SOTamWNgDKc" },
+    { "imagem": "assets/img/img9.jpg", "link": "https://www.youtube.com/watch?v=dX8396ZmSPk" },
+    { "imagem": "assets/img/img10.jpg", "link": "https://www.youtube.com/watch?v=5abffC-K40c" }
+  ],
+  "colegasTrabalho": [
+    { "imagem": "assets/img/sofia.jpg", "nome": "Sofia Grossi", "link": "https://github.com/Sofia-0812" },
+    { "imagem": "assets/img/paula.jpg", "nome": "Paula Nogueira", "link": "https://github.com/PaulaNogueiraC" },
+    { "imagem": "assets/img/larissa.png", "nome": "Larissa Kich", "link": "https://github.com/Larissakich" }
+  ]
+}

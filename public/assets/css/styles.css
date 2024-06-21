@@ -269,8 +269,8 @@ section a {
 /* SEÇÃO 4 */
 
 #secao4 {
-  max-width: 1000px; /* ou outro valor desejado */
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  max-width: 100%; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr /*controle de tamanho -> */1fr 2fr;
   grid-gap: 20px;
 }
 
@@ -279,11 +279,12 @@ section a {
   border-radius: 10px;
   padding: 15px;
   align-items: center;
-  
+  max-width: 100%; 
 }
 
 .colegaImg {
   width: 100%;
+  border-radius: 5px;
 }
 
 .colNome {
