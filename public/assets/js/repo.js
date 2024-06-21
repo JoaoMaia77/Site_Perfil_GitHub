@@ -1,8 +1,8 @@
 const urlParams = new URLSearchParams(window.location.search);
 const repoName = urlParams.get('repo');
 
-const username = 'JoaoMaia77';
-const token = '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';
+const username = 'SEU_USUARIO_GITHUB';
+const token = 'SEU_TOKEN_GITHUB';
 
 fetch(`https://api.github.com/repos/${username}/${repoName}`, {
     headers: {
