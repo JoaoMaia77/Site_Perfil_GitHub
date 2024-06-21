@@ -1,6 +1,6 @@
 
-const username = 'SEU USUÁRIO AQUI';
-const token = 'SEU TOLEM AQUI';
+const username = 'JoaoMaia77';
+const token = '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';
 
 
 fetch(`https://api.github.com/users/${username}`, {
@@ -86,7 +86,7 @@ fetch(`https://api.github.com/users/${username}/repos`, {
 
 //------------------------------------------------------------------------------------------
 
-// Função para buscar dados do JSON Server (mantém a mesma)
+
 async function fetchData(endpoint) {
   try {
     const response = await fetch(`http://localhost:3000/${endpoint}`);
@@ -108,7 +108,7 @@ fetchData('conteudoSugerido').then(conteudo => {
   let indicatorButtonsHTML = '';
 
   conteudo.forEach((item, index) => {
-    const isActive = index === 0 ? 'active' : ''; // Define o primeiro como ativo
+    const isActive = index === 0 ? 'active' : ''; 
     carouselItemsHTML += `
       <div class="carousel-item ${isActive}">
         <a href="${item.link}" target="_blank"><img src="${item.imagem}" class="d-block w-100" alt="Conteúdo Sugerido ${index + 1}"></a>
@@ -122,14 +122,14 @@ fetchData('conteudoSugerido').then(conteudo => {
   carouselInner.innerHTML = carouselItemsHTML;
   carouselIndicators.innerHTML = indicatorButtonsHTML;
 
-  // Inicializar o carrossel após a criação dos elementos
+
   const carousel = new bootstrap.Carousel(carouselExampleIndicators, {
     interval: 2000,
     wrap: true
   });
 });
 
-// Buscar colegas de trabalho
+
 fetchData('colegasTrabalho').then(colegas => {
   const secao4 = document.getElementById('secao4');
   colegas.forEach(colega => {
@@ -140,7 +140,7 @@ fetchData('colegasTrabalho').then(colegas => {
         <img class="colegaImg" src="${colega.imagem}" alt="${colega.nome}"> 
         <p class="colNome">${colega.nome}</p>
       </a>
-    `; // Removido "assets/img/" do src
+    `;
     secao4.appendChild(divColega);
   });
 });
