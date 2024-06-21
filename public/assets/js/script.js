@@ -1,7 +1,5 @@
-
 const username = 'SEU_USUARIO_GITHUB';
 const token = 'SEU_TOKEN_GITHUB';
-
 
 fetch(`https://api.github.com/users/${username}`, {
   headers: {

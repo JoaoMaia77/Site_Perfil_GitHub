@@ -1,8 +1,8 @@
 const urlParams = new URLSearchParams(window.location.search);
 const repoName = urlParams.get('repo');
-
-const username = 'SEU_USUARIO_GITHUB';
+const username = 'SEU_USUARIO_GITHUB ';
 const token = 'SEU_TOKEN_GITHUB';
+
 
 fetch(`https://api.github.com/repos/${username}/${repoName}`, {
     headers: {
@@ -12,7 +12,7 @@ fetch(`https://api.github.com/repos/${username}/${repoName}`, {
     .then(response => response.json())
     .then(repo => {
     
-        document.getElementById('Trepo').textContent = `Repositório: ${repo.name}`;
+        document.getElementById('nrepo').textContent = `Repositório: ${repo.name}`;
         document.getElementById('descricao').textContent = repo.description || 'Sem descrição';
         document.getElementById('data').textContent = repo.created_at.split('T')[0];
         document.getElementById('ling').textContent = repo.language || 'Linguagem não informada';
